@@ -8,6 +8,7 @@ public class QuestItem : MonoBehaviour
     private FixedJoint fj = null;
     private bool collected = false;
     private Manager man;
+    private GameObject ar;
 
     private void Start ()
     {
@@ -38,6 +39,16 @@ public class QuestItem : MonoBehaviour
                 man.FinishQuest ();
             }
         }
+    }
+
+    public void Arrow (GameObject arrow)
+    {
+        ar = Instantiate (arrow, transform.position + (transform.up * 2), new Quaternion());
+    }
+
+    public void ByeArrow ()
+    {
+        Destroy (ar);
     }
 
 }
