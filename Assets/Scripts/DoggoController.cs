@@ -61,7 +61,7 @@ public class DoggoController : MonoBehaviour {
         if (canJump)
         {
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetButtonDown("Jump"))
             {
                 Jump();
             }
