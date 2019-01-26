@@ -11,7 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58901bc87c21cbe47aaf5dde903ab76e, type: 3}
   m_Name: TestFetch
   m_EditorClassIdentifier: 
+  roomName: KitchenPoint
+  itemName: ArmChair
+  endRoomName: BedroomPoint
+  questText: Wouldn't it be great if master had his {0}!!!! I should go get them from
+    the {1} and bring them to the {2}!!!!!!!
+  completedText: Yay!!!! I did it. Owner will be so pleased!
   target: {fileID: 0}
-  questText: 
   spawnPoint: {fileID: 0}
   targetPoint: {fileID: 0}

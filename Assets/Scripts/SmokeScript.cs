@@ -21,4 +21,9 @@ public class SmokeScript : MonoBehaviour {
         smok.Rotate (new Vector3(90, 90, 90) * Time.deltaTime);
     }
 
+    private void OnDestroy ()
+    {
+        doggo.gameObject.GetComponent<JamieSecretScript> ().smokes.Remove (gameObject);
+    }
+
 }

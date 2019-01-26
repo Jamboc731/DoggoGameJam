@@ -14,7 +14,8 @@ public class QuestAttatchment : MonoBehaviour {
 
     private void OnTriggerEnter (Collider other)
     {
-        man.StartQuest (quest);
+        man.q = quest;
+        man.StartQuest ();
         Destroy (gameObject);
     }
 

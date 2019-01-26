@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour {
 
-    public void StartQuest (QuestSO q)
+    public QuestSO q;
+
+    public void StartQuest ()
     {
         
         RaycastHit hit;
@@ -18,6 +20,13 @@ public class Manager : MonoBehaviour {
         string endRoom = hit.collider.gameObject.name;
 
         Debug.Log (string.Format (questText, obj.name, targetRoom, endRoom));
+
+    }
+
+    public void FinishQuest ()
+    {
+
+        Debug.Log (q.completedText);
 
     }
 
