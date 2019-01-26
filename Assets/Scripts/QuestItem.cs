@@ -28,6 +28,9 @@ public class QuestItem : MonoBehaviour
                 fj.breakForce = Mathf.Infinity;
                 fj.connectedBody = gameObject.GetComponent<Rigidbody> ();
                 collected = true;
+                ByeArrow();
+                Arrow(man.arrow);
+                ar.GetComponent<ArrowScript>().target = man.q.targetPoint;
             }
         }
         else
@@ -37,13 +40,15 @@ public class QuestItem : MonoBehaviour
                 fj.breakForce = 0;
                 gameObject.GetComponent<Collider> ().isTrigger = false; gameObject.GetComponent<Rigidbody> ().useGravity = true;
                 man.FinishQuest ();
+                ByeArrow();
             }
         }
     }
 
     public void Arrow (GameObject arrow)
     {
-        ar = Instantiate (arrow, transform.position + (transform.up * 2), new Quaternion());
+        ar = Instantiate (arrow, transform.position + (transform.up * 6), new Quaternion());
+        ar.GetComponent<ArrowScript>().target = transform;
     }
 
     public void ByeArrow ()
