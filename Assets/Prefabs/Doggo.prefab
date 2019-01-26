@@ -660,12 +660,12 @@ MonoBehaviour:
   moveSpeed: 40
   turnSpeed: 3
   canControl: 1
-  jumpForce: 2
+  jumpForce: 5
   jumpRandomness: 2
   jumpPercentage: 0
   drag: 0.9
   gravity: 30
-  multiplier: 1
+  multiplier: 1.1
 --- !u!114 &114327896802055568
 MonoBehaviour:
   m_ObjectHideFlags: 1

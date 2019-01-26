@@ -28,6 +28,8 @@ public class DoggoController : MonoBehaviour {
     private RaycastHit hit;
     private bool canJump = false;
     private bool playing = true;
+    private bool shouldTurn = false;
+    private int dir = 0;
     #endregion
 
     private void Start()
@@ -50,7 +52,7 @@ public class DoggoController : MonoBehaviour {
             rb.AddForce(transform.forward * moveSpeed * zInput);
         }
         ray = new Ray(doggo.position, -doggo.up);
-        Physics.Raycast(ray, out hit, 2f);
+        Physics.Raycast(ray, out hit, .5f);
 
         if (hit.collider != null)
             canJump = true;
@@ -65,9 +67,19 @@ public class DoggoController : MonoBehaviour {
                 Jump();
             }
         }
-
-        //if (Random.Range(0, 1000) > 995)
-        //    StartCoroutine(RandomTurning());
+        
+        if (Random.Range(0, 1000) > 995)
+        {
+            if (Random.Range(0, 10) > 5)
+                dir = 1;
+            else
+                dir = 0;
+            StartCoroutine(RandomTurning());
+        }
+        if (shouldTurn)
+        {
+            Turn(dir);
+        }
 
     }
 
@@ -92,20 +104,16 @@ public class DoggoController : MonoBehaviour {
     private void Turn(int dir)
     {
 
-        doggo.Rotate(transform.up * (moveSpeed / 2) * dir);
+        doggo.Rotate(transform.up * (moveSpeed / 30) * dir);
 
     }
 
     IEnumerator RandomTurning()
     {
-        int dir = -1;
-        if (Random.Range(0, 10) > 5)
-            dir = 1;
-        for (int i = 0; i < 50; i++)
-        {
-            Turn(dir);
-            yield return new WaitForEndOfFrame();
-        }
+        shouldTurn = true;
+        yield return new WaitForSeconds(1);
+        shouldTurn = false;
+        dir = 0;
     }
 
 }
