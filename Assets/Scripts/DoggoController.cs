@@ -66,6 +66,9 @@ public class DoggoController : MonoBehaviour {
             }
         }
 
+        //if (Random.Range(0, 1000) > 995)
+        //    StartCoroutine(RandomTurning());
+
     }
 
     private void FixedUpdate()
@@ -86,19 +89,22 @@ public class DoggoController : MonoBehaviour {
 
     }
 
-    private void Turn()
+    private void Turn(int dir)
     {
 
-
+        doggo.Rotate(transform.up * (moveSpeed / 2) * dir);
 
     }
 
     IEnumerator RandomTurning()
     {
-
+        int dir = -1;
+        if (Random.Range(0, 10) > 5)
+            dir = 1;
         for (int i = 0; i < 50; i++)
         {
-            a
+            Turn(dir);
+            yield return new WaitForEndOfFrame();
         }
     }
 
