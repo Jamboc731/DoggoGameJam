@@ -677,6 +677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e949470c6236cab4fae834f3cbfe1505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  value: 1000
   brokenTV: {fileID: 2100000, guid: 5734a0729ed02e34182503a266986ad9, type: 2}
   tvScreen: {fileID: 23247047893610212}
