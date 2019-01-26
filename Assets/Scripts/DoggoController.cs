@@ -34,7 +34,6 @@ public class DoggoController : MonoBehaviour {
     {
 
         rb = GetComponent<Rigidbody>();
-        StartCoroutine(GetHarder());
 
     }
 
@@ -44,11 +43,11 @@ public class DoggoController : MonoBehaviour {
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
 
-        doggo.Rotate(transform.up * turnSpeed * xInput * badHandling);
+        doggo.Rotate(transform.up * turnSpeed * xInput);
 
         if (canControl)
         {
-            rb.AddForce(transform.forward * moveSpeed * zInput * badHandling);
+            rb.AddForce(transform.forward * moveSpeed * zInput);
         }
         ray = new Ray(doggo.position, -doggo.up);
         Physics.Raycast(ray, out hit, 2f);
@@ -67,8 +66,6 @@ public class DoggoController : MonoBehaviour {
             }
         }
 
-        ToJumpOrNotToJump();
-
     }
 
     private void FixedUpdate()
@@ -82,13 +79,6 @@ public class DoggoController : MonoBehaviour {
             gravity = 30;
     }
 
-    public void increaseHandling(float multiplier)
-    {
-
-        badHandling *= multiplier;
-
-    }
-
     private void Jump()
     {
 
@@ -96,26 +86,11 @@ public class DoggoController : MonoBehaviour {
 
     }
 
-    private void ToJumpOrNotToJump()
+    private void Turn()
     {
 
-        int shouldIJump = Random.Range(0, 1000);
-        //Debug.Log(shouldIJump);
-        if(canJump)
-        if(shouldIJump > (1000 - (jumpPercentage * badHandling / 2)))
-        {
-            Jump();
-        }
 
-    }
 
-    IEnumerator GetHarder()
-    {
-        while (playing)
-        {
-            yield return new WaitForSeconds(1);
-            increaseHandling(multiplier);
-        }
     }
 
 }
