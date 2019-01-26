@@ -9,6 +9,7 @@ public class ExplodingDoggoradius : MonoBehaviour {
 
     public float explosionRadius;
     public float explosionForce;
+    public Transform explosionOrigin;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +22,7 @@ public class ExplodingDoggoradius : MonoBehaviour {
         if (timer < AITimer)
             return;
 
-        Collider[] colliders = Physics.OverlapSphere(this.transform.position, explosionRadius);
+        Collider[] colliders = Physics.OverlapSphere(explosionOrigin.position, explosionRadius);
 
         foreach (Collider nearbyItem in colliders)
         {
