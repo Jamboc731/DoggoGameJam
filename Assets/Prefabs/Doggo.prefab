@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfedecc1e6900d45bfd8d59639f1649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 0.5
+  explosionRadius: 0.2
   explosionForce: 40
 --- !u!114 &114075724602615714
 MonoBehaviour:
@@ -282,13 +282,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doggo: {fileID: 4249014988359440}
   rb: {fileID: 54936156172042460}
-  moveSpeed: 50
-  turnSpeed: 5
+  moveSpeed: 40
+  turnSpeed: 3
   canControl: 1
-  jumpForce: 5
-  jumpRandomness: 15
-  jumpPercentage: 10
-  drag: 0.98
+  jumpForce: 10
+  jumpRandomness: 2
+  jumpPercentage: 0
+  drag: 0.9
   gravity: 30
   multiplier: 1
 --- !u!114 &114327896802055568
