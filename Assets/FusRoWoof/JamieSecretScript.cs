@@ -12,7 +12,13 @@ public class JamieSecretScript : MonoBehaviour {
     private bool canFire = true;
     [HideInInspector]
     public List<GameObject> smokes = new List<GameObject>();
-    //private float [] xPointsOnCircle = new float [] {};
+    public AudioClip[] shoutClips;
+    private AudioSource source;
+
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     private void Update ()
     {
@@ -55,6 +61,9 @@ public class JamieSecretScript : MonoBehaviour {
 
     private void Secret (int stage)
     {
+        //Debug.Log(Mathf.Clamp(stage, 1, 3));
+        source.clip = shoutClips[Mathf.Clamp(stage, 0, 3) - 1];
+        source.PlayOneShot(source.clip);
         float xPos = radius;
         while (xPos > -radius)
         {
