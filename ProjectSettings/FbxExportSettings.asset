@@ -15,6 +15,7 @@
             "."
         ],
         "fbxSavePaths": [
+            "Models",
             "."
         ],
         "selectedFbxPath": 0,
