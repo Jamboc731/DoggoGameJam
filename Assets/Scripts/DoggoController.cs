@@ -93,4 +93,13 @@ public class DoggoController : MonoBehaviour {
 
     }
 
+    IEnumerator RandomTurning()
+    {
+
+        for (int i = 0; i < 50; i++)
+        {
+            a
+        }
+    }
+
 }
