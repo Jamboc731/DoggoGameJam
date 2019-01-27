@@ -55,9 +55,15 @@ public class DoggoController : MonoBehaviour {
         Physics.Raycast(ray, out hit, .5f);
 
         if (hit.collider != null)
+        {
             canJump = true;
+            canControl = true;
+        }
         else
+        {
             canJump = false;
+            canControl = false;
+        }
 
         if (canJump)
         {
@@ -94,10 +100,10 @@ public class DoggoController : MonoBehaviour {
             gravity = 30;
     }
 
-    private void Jump()
+    public void Jump()
     {
 
-        rb.AddForce(((transform.up * 3 + transform.forward) * jumpForce) + (transform.right * Random.Range(-jumpRandomness, jumpRandomness) * badHandling), ForceMode.Impulse);
+        rb.AddForce(((transform.up * 3) * jumpForce) + (transform.right * Random.Range(-jumpRandomness, jumpRandomness) * badHandling), ForceMode.Impulse);
 
     }
 

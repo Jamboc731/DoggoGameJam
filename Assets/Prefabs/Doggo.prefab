@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 4847406447187632}
   - component: {fileID: 20689160560163440}
   - component: {fileID: 81104134688377576}
+  - component: {fileID: 114055469698370884}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -190,7 +191,7 @@ Transform:
   m_Children:
   - {fileID: 4162378316815370}
   m_Father: {fileID: 4249014988359440}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4247082848310394
 Transform:
@@ -217,8 +218,8 @@ Transform:
   m_Children:
   - {fileID: 4450585204560296}
   - {fileID: 4970942851699256}
-  - {fileID: 4847406447187632}
   - {fileID: 4220439243348790}
+  - {fileID: 4847406447187632}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -268,11 +269,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1890107584454700}
   m_LocalRotation: {x: -0.21901599, y: 0.006436625, z: -0.0014449974, w: -0.97569895}
-  m_LocalPosition: {x: 0.014, y: 0.464, z: -1.051}
+  m_LocalPosition: {x: 0.013999939, y: 0.464, z: -1.0510001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4249014988359440}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 30.000002, y: 180.00002, z: 0}
 --- !u!4 &4970942851699256
 Transform:
@@ -644,6 +645,19 @@ MonoBehaviour:
   explosionRadius: 0.35
   explosionForce: 40
   explosionOrigin: {fileID: 4220439243348790}
+--- !u!114 &114055469698370884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1890107584454700}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a3758d6f84a3a488321900e0d3aacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1232537076258596}
+  rotateSpeed: 5
 --- !u!114 &114075724602615714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -660,7 +674,7 @@ MonoBehaviour:
   moveSpeed: 40
   turnSpeed: 3
   canControl: 1
-  jumpForce: 5
+  jumpForce: 3
   jumpRandomness: 2
   jumpPercentage: 0
   drag: 0.9
