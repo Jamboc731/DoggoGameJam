@@ -11,20 +11,19 @@ public class Furniture : MonoBehaviour
     Rigidbody rbody;
 
     bool hasUpdatedScore = false;
+    bool audioHasPlayed = false;
 
     private void Start()
     {
         rbody = GetComponent<Rigidbody>();
 
         rbody.isKinematic = true;
-
     }
 
     public virtual void Explode(Transform explosionOrigin, float explosionForce)
     {
         rbody.isKinematic = false;
         rbody.AddExplosionForce(explosionForce, explosionOrigin.transform.position, 1);
-
     }
 
     public virtual void OnCollisionEnter(Collision collision)

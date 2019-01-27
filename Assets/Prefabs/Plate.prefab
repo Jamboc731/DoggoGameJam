@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1084545790117278}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5462491, y: 0.0009875981, z: 3.2276006}
+  m_LocalPosition: {x: 9.94765, y: 1.097, z: 2.158536}
   m_LocalScale: {x: 0.00048222888, y: 0.00048222888, z: 0.00048222888}
   m_Children:
   - {fileID: 4597205864893668}
@@ -388,6 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd59d18d6b80b764c83d3bd102b1b198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakSound: {fileID: 8300000, guid: b6dc84cb24fb9624785c94cf61ee1eb2, type: 3}
+  audioSource: {fileID: 0}
   value: 2
 --- !u!114 &114424282046574686
 MonoBehaviour:
@@ -400,6 +402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd59d18d6b80b764c83d3bd102b1b198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakSound: {fileID: 8300000, guid: b6dc84cb24fb9624785c94cf61ee1eb2, type: 3}
+  audioSource: {fileID: 0}
   value: 2
 --- !u!114 &114986735018955682
 MonoBehaviour:
@@ -412,4 +416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd59d18d6b80b764c83d3bd102b1b198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakSound: {fileID: 8300000, guid: b6dc84cb24fb9624785c94cf61ee1eb2, type: 3}
+  audioSource: {fileID: 0}
   value: 2
