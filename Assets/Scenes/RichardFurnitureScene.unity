@@ -1613,6 +1613,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.9715805, y: 24.534546, z: 4.826187}
   m_Center: {x: 46.01421, y: 17.862366, z: 0.00000071525574}
+--- !u!1001 &1741060168
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4623339457954172, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623339457954172, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623339457954172, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623339457954172, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623339457954172, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623339457954172, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623339457954172, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623339457954172, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 485c14569afda8841bca92411c4184cf, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1804165626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1612355033298808, guid: a6c93324009606a4b9a75977bb49850f,
