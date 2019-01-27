@@ -39,7 +39,7 @@ public class QuestItem : MonoBehaviour
         {
             if (other.CompareTag ("DeliverPoint"))
             {
-                fj.breakForce = 0;
+                fj.connectedBody = null;
                 gameObject.GetComponent<Collider> ().isTrigger = false; gameObject.GetComponent<Rigidbody> ().useGravity = true;
                 man.FinishQuest ();
                 ByeArrow();

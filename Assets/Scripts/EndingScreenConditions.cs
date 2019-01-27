@@ -20,7 +20,7 @@ public class EndingScreenConditions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(owner.ownerProgress.value >= .99f)
+		if(owner.ownerProgress.value >= .90f)
         {
             EndingScreen();
         }
@@ -34,25 +34,25 @@ public class EndingScreenConditions : MonoBehaviour {
         if(_score < 200)
         {
             //LAZY DOGGO
-            SceneManager.LoadScene("lazyDoggoScene");
+            SceneManager.LoadScene(5);
         }
 
         if (_score < 5000)
         {
             //BEST DOGGO
-            SceneManager.LoadScene("bestDoggoScene");
+            SceneManager.LoadScene(2);
         }
 
         if (_score > 5000)
         {
             //MODERATE DOGGO
-            SceneManager.LoadScene("badDoggoScene");
+            SceneManager.LoadScene(3);
         }
 
         if (_score > 10000)
         {
             //WORSTEST DOGGO
-            SceneManager.LoadScene("worstDoggoScene");
+            SceneManager.LoadScene(4);
         }
     }
 }

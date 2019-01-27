@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class DoggoController : MonoBehaviour {
@@ -38,12 +39,17 @@ public class DoggoController : MonoBehaviour {
     {
 
         rb = GetComponent<Rigidbody>();
-
+        doggoAnimator = GetComponent<Animator>();
 
     }
 
     private void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
 
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
@@ -102,7 +108,7 @@ public class DoggoController : MonoBehaviour {
         else
             gravity = 30;
 
-        //doggoAnimator.SetFloat();
+        doggoAnimator.SetFloat("Speed", rb.velocity.magnitude);
     }
 
     public void Jump()

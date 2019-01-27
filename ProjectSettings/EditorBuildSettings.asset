@@ -11,10 +11,25 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/TitleScene.unity
-    guid: 5d41ba6dc32c54d4fa09dc22959ad72f
+    guid: 1e7d32fae4605ed488c3cfc908c094e0
   - enabled: 1
-    path: Assets/Scenes/SandboxScene.unity
+    path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/GoodDoggoScene.unity
+    guid: b860430a6b194b449b4d511fe2a69d31
+  - enabled: 1
+    path: Assets/Scenes/BadDoggoScene.unity
+    guid: 9afc3dddec3311641a539568dc71ddfd
+  - enabled: 1
+    path: Assets/Scenes/WorstDoggoScene.unity
+    guid: e4220ef7b9773114ba1dd9ecb04b49af
+  - enabled: 1
+    path: Assets/Scenes/LazyDoggoScene.unity
+    guid: 8a23027f45f8b9f4782103f9cd98058b
   m_configObjects: {}

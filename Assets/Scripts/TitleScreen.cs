@@ -12,7 +12,7 @@ public class TitleScreen : MonoBehaviour {
     
     public void MainMenu()
     {//loads the main menu
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
