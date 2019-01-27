@@ -8,6 +8,7 @@ public class DoggoController : MonoBehaviour {
     #region PublicVars
     public Transform doggo;
     public Rigidbody rb;
+    public OwnerScript own;
     public float moveSpeed;
     public float turnSpeed;
     public bool canControl = true;
@@ -18,6 +19,7 @@ public class DoggoController : MonoBehaviour {
     public float gravity;
     public float multiplier;
     public bool canJump = false;
+    public Animator doggoAnimator;
     #endregion
 
     #region Private Vars
@@ -37,6 +39,7 @@ public class DoggoController : MonoBehaviour {
 
         rb = GetComponent<Rigidbody>();
 
+
     }
 
     private void Update()
@@ -49,7 +52,7 @@ public class DoggoController : MonoBehaviour {
 
         if (canControl)
         {
-            rb.AddForce(transform.forward * moveSpeed * zInput);
+            rb.AddForce(transform.forward * moveSpeed * zInput * (1 + (own.state / 3)));
         }
         ray = new Ray(doggo.position, -doggo.up);
         Physics.Raycast(ray, out hit, .5f);
@@ -74,7 +77,7 @@ public class DoggoController : MonoBehaviour {
             }
         }
         
-        if (Random.Range(0, 1000) > 995)
+        if (Random.Range(0, 1000) > (1000 - 5 * own.state))
         {
             if (Random.Range(0, 10) > 5)
                 dir = 1;
@@ -98,6 +101,8 @@ public class DoggoController : MonoBehaviour {
             gravity = 50;
         else
             gravity = 30;
+
+        //doggoAnimator.SetFloat();
     }
 
     public void Jump()
