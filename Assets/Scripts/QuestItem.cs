@@ -31,6 +31,7 @@ public class QuestItem : MonoBehaviour
                 ByeArrow();
                 Arrow(man.arrow);
                 ar.GetComponent<ArrowScript>().target = man.q.targetPoint;
+                transform.position = fj.transform.position;
             }
         }
         else
