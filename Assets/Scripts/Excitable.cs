@@ -48,7 +48,7 @@ public class Excitable : MonoBehaviour
 
             t = 0;
             excitednessSlider.value = (float)excitedness/100;
-            Debug.Log (string.Format("{0}, {1}", excitedness, excitednessSlider.value));
+            //Debug.Log (string.Format("{0}, {1}", excitedness, excitednessSlider.value));
         }
 
     }

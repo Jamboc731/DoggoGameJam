@@ -13,6 +13,7 @@ public class QuestItem : MonoBehaviour
     private void Start ()
     {
         man = GameObject.Find ("Manager").GetComponent<Manager> ();
+        GetComponent<Rigidbody>().useGravity = false;
     }
 
     private void OnTriggerEnter (Collider other)

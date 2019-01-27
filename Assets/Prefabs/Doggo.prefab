@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 82962504240716298}
   m_Layer: 0
   m_Name: Doggo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,7 +191,7 @@ Transform:
   m_Children:
   - {fileID: 4162378316815370}
   m_Father: {fileID: 4249014988359440}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4247082848310394
 Transform:
@@ -213,12 +213,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1232537076258596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6471229, y: 0.233, z: 3.7998142}
+  m_LocalPosition: {x: -2.4980054, y: 0.486, z: 1.1488719}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4450585204560296}
   - {fileID: 4970942851699256}
   - {fileID: 4220439243348790}
+  - {fileID: 4450585204560296}
   - {fileID: 4847406447187632}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -247,7 +247,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4249014988359440}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4834546577973512
 Transform:
@@ -289,7 +289,7 @@ Transform:
   - {fileID: 4394555138332146}
   - {fileID: 4247082848310394}
   m_Father: {fileID: 4249014988359440}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20689160560163440
 Camera:
@@ -680,6 +680,7 @@ MonoBehaviour:
   drag: 0.9
   gravity: 30
   multiplier: 1.1
+  canJump: 0
 --- !u!114 &114327896802055568
 MonoBehaviour:
   m_ObjectHideFlags: 1
