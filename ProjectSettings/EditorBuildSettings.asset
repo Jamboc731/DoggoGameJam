@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Loading.unity
-    guid: 86297369955fe6547adbe09322374f05
+    path: Assets/Scenes/TitleScene.unity
+    guid: 5d41ba6dc32c54d4fa09dc22959ad72f
   - enabled: 1
     path: Assets/Scenes/SandboxScene.unity
     guid: 99c9720ab356a0642a771bea13969a05

@@ -21,4 +21,9 @@ public class UIController : MonoBehaviour {
         damageText.text = "£" + scoreValue; 
     }
 
+    public static void GetScore (out int value)
+    {
+        value = scoreValue;
+    }
+
 }

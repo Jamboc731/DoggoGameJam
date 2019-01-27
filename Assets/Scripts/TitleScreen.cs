@@ -9,9 +9,11 @@ public class TitleScreen : MonoBehaviour {
     {//will load the level 1 scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-
-
+    
+    public void MainMenu()
+    {//loads the main menu
+        SceneManager.LoadScene(1);
+    }
 
     public void QuitGame()
     {//quit game
