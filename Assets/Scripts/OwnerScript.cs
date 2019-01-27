@@ -11,7 +11,7 @@ public class OwnerScript : MonoBehaviour {
     private void Update ()
     {
         float dTime = Time.deltaTime;
-        ownerProgress.value += (1 / 150) * dTime;
+        ownerProgress.value +=  dTime / 150;
 
         if (ownerProgress.value < 50 * dTime)
             state = 1;

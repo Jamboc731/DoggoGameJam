@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Quest", menuName = "Quest")]
 public class QuestSO : ScriptableObject
 {
-    public string roomName;
+    public string spawnPointName;
     public string itemName;
-    public string endRoomName;
+    public string deliveryPointName;
     public string questText;
     public string completedText;
     [HideInInspector]
@@ -20,8 +20,8 @@ public class QuestSO : ScriptableObject
     private void OnEnable ()
     {
         target = GameObject.Find (itemName);
-        spawnPoint = GameObject.Find (roomName).transform;
-        targetPoint = GameObject.Find (endRoomName).transform;
+        spawnPoint = GameObject.Find (spawnPointName).transform;
+        targetPoint = GameObject.Find (deliveryPointName).transform;
     }
 
 }

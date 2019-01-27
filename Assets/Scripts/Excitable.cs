@@ -42,6 +42,7 @@ public class Excitable : MonoBehaviour
                 excitedness -= Random.Range(40, 90);
                 tempMax = Random.Range(5, 10);
                 // TODO: Call dog.explode();
+                if(doggo.canJump)
                 doggo.Jump ();
             }
 

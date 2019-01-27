@@ -17,6 +17,7 @@ public class DoggoController : MonoBehaviour {
     public float drag;
     public float gravity;
     public float multiplier;
+    public bool canJump = false;
     #endregion
 
     #region Private Vars
@@ -26,7 +27,6 @@ public class DoggoController : MonoBehaviour {
     private bool toJump;
     private Ray ray;
     private RaycastHit hit;
-    private bool canJump = false;
     private bool playing = true;
     private bool shouldTurn = false;
     private int dir = 0;
