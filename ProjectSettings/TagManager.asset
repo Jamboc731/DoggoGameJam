@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - DeliverPoint
+  - Floor
   layers:
   - Default
   - TransparentFX
